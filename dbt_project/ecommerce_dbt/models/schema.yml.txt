@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_transactions
+    description: "Cleaned and typed transaction records"
+    columns:
+      - name: invoice_no
+        tests:
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: quantity
+        tests:
+          - not_null
+      - name: revenue
+        tests:
+          - not_null
+
+  - name: customer_segments
+    description: "RFM scoring and segment labels per customer"
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: revenue_at_risk
+    description: "Revenue at risk per customer joined with churn labels"
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
