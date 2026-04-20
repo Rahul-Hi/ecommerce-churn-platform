@@ -1,32 +1,59 @@
-# Virtual env
-venv/
+# =========================
+# Python cache
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
 
-# Env file
+# =========================
+# Virtual environment
+# =========================
+venv/
+.env/
+
+# =========================
+# Environment variables
+# =========================
 .env
 
+# =========================
 # Data (large / reproducible)
+# =========================
 data/raw/
 data/processed/
 data/train/
 data/test/
 
+# =========================
 # Models
+# =========================
 models/*.pkl
 
+# =========================
 # Logs
+# =========================
 logs/
 dbt_project/logs/
 
-# Temp / junk
-*.txt
-
-# Python cache
-__pycache__/
-*.pyc
-
+# =========================
 # Jupyter
+# =========================
 .ipynb_checkpoints/
 
+# =========================
 # Misc
+# =========================
 .kaggle/
+
+# =========================
+# OS / Editor junk
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IMPORTANT: Allow required deployment files
+# =========================
+!requirements.txt
 !runtime.txt
