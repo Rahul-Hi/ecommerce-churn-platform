@@ -1,11 +1,31 @@
+# Virtual env
 venv/
+
+# Env file
 .env
+
+# Data (large / reproducible)
 data/raw/
 data/processed/
 data/train/
 data/test/
+
+# Models
+models/*.pkl
+
+# Logs
+logs/
+dbt_project/logs/
+
+# Temp / junk
+*.txt
+
+# Python cache
 __pycache__/
 *.pyc
-models/*.pkl
-.kaggle/
+
+# Jupyter
 .ipynb_checkpoints/
+
+# Misc
+.kaggle/
